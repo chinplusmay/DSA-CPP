@@ -12,7 +12,7 @@ void LeftShiftBrute(vector<int> &arr, int n,int d){  // TC-> O(n+d) & SC-> O(d)
     for(int i = d; i<n; i++){  // O(n-d)
         arr[i-d] = arr[i];
     }
-    for(int i = 0; i<d; i++){  // copy elements from temp to arr    // O(d)
+    for(int i = 0; i<d; i++){  // copy elements from temp to arr at the back of arr    // O(d)
         arr[(n-d)+i] = temp[i];
 
     }
@@ -22,6 +22,8 @@ void LeftShiftBrute(vector<int> &arr, int n,int d){  // TC-> O(n+d) & SC-> O(d)
     }
     */
 }
+
+// for Optimal fn
 void Reverse(vector<int> &arr, int start, int end){
     while(start <= end){
         int temp = arr[start];
@@ -45,7 +47,7 @@ void LeftShiftOpti(vector<int> &arr, int n,int d){
 
 
 int main(){
-    vector<int> arr = {1,2};
+    vector<int> arr = {1,2,5,1,2};
     int n = arr.size();
     int d = 1;
 
