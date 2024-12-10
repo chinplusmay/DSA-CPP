@@ -24,13 +24,13 @@ vector<int> Brute(vector<int> &a, vector<int> &b) {
 
 
 vector<int> Optimal(vector<int> &a, vector<int> &b){
-    vector <int> ra; // resultant array
+    vector <int> ra; // resultant array  sc(n1+n2) for return the ans
     int n1 = a.size();
     int n2 = b.size();
-    int i,j = 0; // pointers for both the arrays
+    int i = 0, j = 0; // pointers for both the arrays
 
-    while(i < n1 && j > n2){ // when both pointers exist in both the arrays
-        if(a[i] < b[j]){
+    while(i < n1 && j < n2){ // when both pointers exist in both the arrays
+        if(a[i] <= b[j]){
             if(ra.size() == 0 || ra.back() != a[i]){   // if ra have no element OR if a[i] is not already present(Avoid duplicates) in the ra push a[i]
                 ra.push_back(a[i]);
             }
@@ -73,7 +73,7 @@ int main(){
 
     
 
-    for(auto i : Brute(a,b)){
+    for(auto i : Optimal(a,b)){
         cout << i <<" ";
     }
 }
