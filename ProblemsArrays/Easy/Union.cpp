@@ -51,16 +51,16 @@ vector<int> Optimal(vector<int> &a, vector<int> &b){
     while(j < n2){  // when i pointer is exhausted // here no comparision is needed as only one array is left
         if(ra.empty() || ra.back() != b[j]){
             ra.push_back(b[j]);
-            j++;
-        }
+            
+        }j++;
         
     }
 
     while(i < n1){  // when j pointer is exhausted // here no comparision is needed as only one array is left
         if(ra.empty() || ra.back() != a[i]){
             ra.push_back(a[i]);
-            i++;
-        }
+            
+        }i++;
         
     }
 
