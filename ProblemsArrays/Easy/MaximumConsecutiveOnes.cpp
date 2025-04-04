@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+//https://leetcode.com/problems/max-consecutive-ones/
 
 int findMaxConsecutiveOnes(vector<int>& nums) {
     int n = nums.size();
