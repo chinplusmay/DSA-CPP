@@ -47,7 +47,7 @@ int main(){
     vector<int> arr = {2,7,11,15}; // 0,1
     int target = 9;
 
-    for(auto it : Optimal(arr,target)){
+    for(auto it : Better(arr,target)){
         cout << it <<" ";
     }
 }
