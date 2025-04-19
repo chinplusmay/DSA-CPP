@@ -31,8 +31,24 @@ int Better(vector<int>& nums){
     }return maxSum;
 }
 
+//Kadane's Algo
+int Optimal(vector<int>& nums){
+    int n = nums.size();
+    int maxSum = INT_MIN;
+    int sum = 0;
+    for(int i = 0; i<n; i++){
+        sum += nums[i];
+
+        maxSum = max(sum, maxSum);
+
+        if(sum < 0) sum = 0;
+
+    }
+    if(maxSum < 0) return 0; // if there is no positive element(subarray) return empty subarray :optional only if asked in question
+    return maxSum;
+}
 
 int main(){
     vector<int> arr = {-2,1,-3,4,-1,2,1,-5,4}; //6
-    cout << Better(arr);
+    cout << Optimal(arr);
 }
