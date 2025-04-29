@@ -13,8 +13,8 @@ int Brute(vector<int> arr){
         if(count == 1) return num;
     }
 } 
-
-int Better(vector<int> arr){
+; 
+int Better(vector<int> arr){ //TC:O(3N)  SC: O(maxElement+1)
     int n = arr.size();
     int max = 0;
     for(int i = 0; i<n; i++){   // O(n)
