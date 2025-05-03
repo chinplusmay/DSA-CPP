@@ -9,7 +9,7 @@ bool LinearSearch(vector<int>&nums, int x){ //for brute
     }return false;
 }
 
-int Brute(vector<int>&nums){
+int Brute(vector<int>&nums){ // tc: O(N^2)
     int n = nums.size();
     int longest = 1;
     for(int i = 0; i<n; i++){ // loop for selecting first num
@@ -26,7 +26,7 @@ int Brute(vector<int>&nums){
     return longest;
 }
 
-int Better(vector<int>&nums){
+int Better(vector<int>&nums){ //tc:O(NlogN) + O(N)
     int n = nums.size();
     
     sort(nums.begin(), nums.end()); // first sort the array
@@ -51,7 +51,7 @@ int Better(vector<int>&nums){
     return longest;
 }
 
-int Optimal(vector<int>&nums){
+int Optimal(vector<int>&nums){ //tc:O(N) + O(2*N) ~ O(3*N)  sc: O(N)
     int n = nums.size();
     int longest = 1;
     int count = 0;
@@ -83,6 +83,7 @@ int main(){
     vector<int> a = {100, 200, 1, 2, 4, 3};
     int ans = Optimal(a);
     cout<<ans;
+    
 
 
 }
