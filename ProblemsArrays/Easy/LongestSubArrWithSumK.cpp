@@ -31,7 +31,7 @@ int Brute2(vector<int>&nums, long long k){
     return len;
 }
 
-// using presum map  this is teh Optimal solution for +ve's and -ve's
+// using presum map  this is the Optimal solution for +ve's and -ve's
 int Better(vector<int>&nums, int k){ //TC: ordered map O(N*Log(N)) unordered:O(N*1) ≈ N*(N)=O(N^2) 1->N if there are lot of collisions in the map search time becomes N
     map<long long, int > preSumMap; // SC: O(N)
     int maxLen = 0;
