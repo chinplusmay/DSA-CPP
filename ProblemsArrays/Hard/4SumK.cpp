@@ -31,7 +31,7 @@ vector<vector<int>> Brute(vector<int> &nums, int target){  // tc:O(N^4)
 vector<vector<int>> Better(vector<int> &nums, int target){ // tc:O(N3*log(M)) M = no. of elements in the set
     int n = nums.size();
 
-    set<vector<int>> vectorSet;
+    set<vector<long long>> vectorSet;
     for(int i = 0; i<n; i++){
         for(int j = i+1; j<n; j++){
             set<long long> hashSet;
@@ -40,7 +40,7 @@ vector<vector<int>> Better(vector<int> &nums, int target){ // tc:O(N3*log(M)) M 
                 sum += nums[k];
                 long long fourth = target - sum;
                 if(hashSet.find(fourth) != hashSet.end()){
-                    vector<int> temp = {nums[i], nums[j], nums[k], fourth};
+                    vector<long long> temp = {nums[i], nums[j], nums[k], fourth};
                     sort(temp.begin(), temp.end());
                     vectorSet.insert(temp);
                 }
