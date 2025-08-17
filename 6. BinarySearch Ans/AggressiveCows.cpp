@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//Agressive Cows
 bool CanWePlace(vector<int> &stalls, int distance, int cows){
     int cntCows = 1;
     int last = stalls[0];
@@ -25,7 +25,7 @@ int Brute(vector<int> &stalls, int cows){ // O(NlogN) + O(N *(max(stalls[])-min(
     }return limit;
 }
 
-int Optimal(vector<int> &stalls, int cows){ // O(NlogN) + O(N * log(max(stalls[])-min(stalls[])))
+int Optimal(vector<int> &stalls, int cows){ //  O(NlogN) + O(N * log(max(stalls[])-min(stalls[])))
     sort(stalls.begin(), stalls.end());
     int limit = stalls[stalls.size()-1] - stalls[0];
     int low = 1;
