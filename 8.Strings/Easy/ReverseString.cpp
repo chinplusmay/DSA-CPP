@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 string Brute(string s){ //tc, sc O(n)
     string ans;
     stack<string> st;
