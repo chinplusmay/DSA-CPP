@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int myAtoi(string s) {
+int myAtoi(string s) { //tc:O(N)
     int i = 0;
     long long ans = 0;
     while(i < s.size() && s[i] == ' '){
