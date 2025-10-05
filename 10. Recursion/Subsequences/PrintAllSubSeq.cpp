@@ -14,10 +14,12 @@ void SubSRec(int i, int a[], vector<int> &ds, int n){
         return;
     }
     
+    // pick
     ds.push_back(a[i]);
     SubSRec(i+1, a, ds, n);
     ds.pop_back();
 
+    // not pick
     SubSRec(i+1, a, ds, n);
 }
 
